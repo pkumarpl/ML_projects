@@ -12,8 +12,20 @@ import shutil
 MAYACHEMTOOLS_DIR = "~/sfs0/mayachemtools"
 
 class FeatureGenerator:
+	""" 
+	This is a class for mathematical operations on SMILE to generate molecular fingerprints
+      
+    Attributes: 
+        SMILE (sring): SMILE string
+	""" 
 
     def __init__(self, smiles):
+    	""" 
+        The constructor for FeatureGenerator class. 
+  
+        Parameters: 
+           SMILE (sring): SMILE string 
+           """ 
         self.smiles = smiles
         self.temp_dir = tempfile.mkdtemp()
 
@@ -23,6 +35,12 @@ class FeatureGenerator:
 
 
     def toSDF(self):
+    	""" 
+    	The function to convert SMILE to SDF format. 
+          
+        Returns: 
+            SDF: SDF file from supplied SMILE is returned and saved a temp dir 
+    	""" 
         # Try to get the rdkit mol
         mol = Chem.MolFromSmiles(self.smiles)
         #if mol == None: raise("Error in mol object")
@@ -36,6 +54,12 @@ class FeatureGenerator:
 
 
     def toTPATF(self):
+    	""" 
+    	The function to calculate the Topological Pharmacophore Atom Triplets Fingerprints
+          
+        Returns: 
+            SDF: Topological Pharmacophore Atom Triplets Fingerprints from supplied SDF file.
+    	""" 
         features = []
         script_path = os.path.join(MAYACHEMTOOLS_DIR,
                 "bin/TopologicalPharmacophoreAtomTripletsFingerprints.pl")
@@ -61,6 +85,12 @@ class FeatureGenerator:
 
 
     def toTPAPF(self):
+    	""" 
+    	The function to calculate the Topological Pharmacophore Atom Pairs Fingerprints 
+          
+        Returns: 
+            SDF: Topological Pharmacophore Atom Pairs Fingerprints from supplied SDF file.
+    	""" 
         features = []
         script_path = os.path.join(MAYACHEMTOOLS_DIR,
                 "bin/TopologicalPharmacophoreAtomPairsFingerprints.pl")
