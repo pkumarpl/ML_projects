@@ -26,7 +26,7 @@ In order to predict customer churn rates first I transformed data into numerical
 In the second step I implemented following algorithms enabled by Spark:
 
 1. Logistic Regression
-2. Decision tree classifier
+2. Decision Tree Classifier
 3. Gradient Boosting
 
 In the first run the algorithms were specified without parameter tuning in order to improve their time performance.
