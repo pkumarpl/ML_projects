@@ -1,0 +1,3 @@
+userId,lifetime,gender,total_songs,num_thumb_up,num_thumb_down,aritstCount,add_to_playlist,listen_time,avgSessionTime,minSessionTime,maxSessionTime,avgSessionSongs,label
+67,138.89282407407407,0,1322,54,10,824,37,273173.7324599996,347.4256410256411,0.0,1018.2166666666667,91.5,0
+68,100.0112962962963,1,48,2,0,29,0,7079.692970000001,63.74166666666667,33.53333333333333,93.95,14.5,0
