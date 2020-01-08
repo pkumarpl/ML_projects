@@ -36,3 +36,4 @@ The results of the first run were:
 3. The gradient boosted trees model has a accuracy of: 0.85, and F1 score of: 0.6, using 294.64 seconds.
 
 After the first run I chose gradient boosting for further tuning. After parameter tuning gradient boosting scored even better on this dataset with F1 score over 0.83. As this data set is contains a tiny subset (128MB) of the full dataset available (12GB), hence further training on full dataset might improve the prediction. 
+
