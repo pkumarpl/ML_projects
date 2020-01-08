@@ -26,7 +26,7 @@ In order to predict customer churn rates first I transformed data into numerical
 In the second step I implemented following algorithms enabled by Spark:
 
 1. Logistic Regression
-2. Decision tree classifier
+2. Decision Tree Classifier
 3. Gradient Boosting
 
 In the first run the algorithms were specified without parameter tuning in order to improve their time performance.
@@ -36,4 +36,7 @@ The results of the first run were:
 3. The gradient boosted trees model has a accuracy of: 0.85, and F1 score of: 0.6, using 294.64 seconds.
 
 After the first run I chose gradient boosting for further tuning. After parameter tuning gradient boosting scored even better on this dataset with F1 score over 0.83. As this data set is contains a tiny subset (128MB) of the full dataset available (12GB), hence further training on full dataset might improve the prediction. 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5987c4934777dcea61819a94a5753f6c3780af2c
